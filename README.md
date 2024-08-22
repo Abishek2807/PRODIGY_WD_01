@@ -36,4 +36,4 @@ No installation is required. Simply open the HTML file in a web browser.
   
 
 ### Deployment
-link:
+link : https://abishek2807.github.io/PRODIGY_WD_01/
