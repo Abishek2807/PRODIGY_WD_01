@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Navigation Menu</title>
+    <link rel="icon" href="https://cdn2.iconfinder.com/data/icons/seo-web/512/website-code-1024.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #3bafda;
+    color: white;
+    padding: 10px 0;
+    z-index: 1000;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+nav.scrolled {
+    background-color:  #add8e6;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} 
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: ;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li { 
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.10s;
+}
+
+nav ul li a:hover {
+    color: #add8e6;
+}
+
+.content {
+    padding-top: 60px; 
+}
+
+section {
+    padding: 60px;
+    margin: 20px 0;
+    background:  #add8e6;
+}
+    </style>
+    </head>
+<body>
+    <nav id="navbar">
+        <ul>
+            <i class="fa fa-home" aria-hidden="true"></i><li><a href="#home">Home</a></li> 
+            <i class="fa fa-address-card"></i><li><a href="#about">About</a></li>
+            <i class="fa fa-right-to-bracket"></i><li><a href="#login">LogIn</a></li>
+            <i class="fa fa-user-plus"></i><li><a href="#signup">SignUp</a></li>
+        </ul> 
+    </nav>
+    <div class="content">
+        <section id="home">
+            <h1>Home</h1>
+            <p>Welcome to the home page.</p>
+        </section>
+        <section id="about">
+            <h1>About</h1>
+            <p>About us section</p>
+        </section>
+        <section id="login">
+            <h1>LogIn</h1>
+            <p>Login Section</p>
+        </section>
+        <section id="signup">
+            <h1>SignUp</h1>
+            <p>SignUp Section</p>
+        </section>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+    const navbar = document.getElementById('navbar');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+});  
+    </script>
+</body>
+</html>
